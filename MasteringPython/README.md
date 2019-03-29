@@ -1,6 +1,1 @@
-# Mastering Python
-
-
-
-
-[Home](../README.md)
+## Mastering Python Code Examples
