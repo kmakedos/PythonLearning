@@ -7,7 +7,7 @@ def km_to_miles():
 
 window = Tk()
 e1_value = StringVar()
-button = Button(window, text="Execute me",command = km_to_miles)
+button = Button(window, text="Convert KM to Miles",command = km_to_miles)
 button.grid(row=0,column=0)
 e1 = Entry(window, textvariable = e1_value)
 e1.grid(row=0, column=1)

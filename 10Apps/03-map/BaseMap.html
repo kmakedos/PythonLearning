@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_a16c88edd14f4d1797cb1704c4b155af {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_a16c88edd14f4d1797cb1704c4b155af" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_a16c88edd14f4d1797cb1704c4b155af = L.map(
+        'map_a16c88edd14f4d1797cb1704c4b155af', {
+        center: [40.6, 24.5],
+        zoom: 9,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_71c718b1bd1543788b2dfae5fd169010 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_a16c88edd14f4d1797cb1704c4b155af);
+    
+            var feature_group_b7bf060de7a0463995f78c1b021f2c1c = L.featureGroup(
+                ).addTo(map_a16c88edd14f4d1797cb1704c4b155af);
+        
+    
+        var marker_aefc80c33b2e4ffb89b841fe915976f3 = L.marker(
+            [40.618871, 24.761553],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_c0528930b102455e80e95f2633df7ab4 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_aefc80c33b2e4ffb89b841fe915976f3.setIcon(icon_c0528930b102455e80e95f2633df7ab4);
+            
+    
+            var popup_8b695d383ff54f1fadd2faf63709b90b = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_692d635d3d214747967bb20b7582a5b3 = $(`<div id="html_692d635d3d214747967bb20b7582a5b3" style="width: 100.0%; height: 100.0%;">Agios Ioannis - ΑΓΙΟΣ ΙΩΑΝΝΗΣ | Άγιος Ιωάννης</div>`)[0];
+                popup_8b695d383ff54f1fadd2faf63709b90b.setContent(html_692d635d3d214747967bb20b7582a5b3);
+            
+
+            marker_aefc80c33b2e4ffb89b841fe915976f3.bindPopup(popup_8b695d383ff54f1fadd2faf63709b90b)
+            ;
+
+            
+        
+    
+        var marker_a701884a2ab84ec99ad4df946d5c8b4f = L.marker(
+            [40.776779, 24.695363],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_3e9a7349811f4cf3894e90e963ada82e = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a701884a2ab84ec99ad4df946d5c8b4f.setIcon(icon_3e9a7349811f4cf3894e90e963ada82e);
+            
+    
+            var popup_600ebd566c7b4708bc778cd59e511d2c = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_56792e16f2f4418abce0e0fd8b899350 = $(`<div id="html_56792e16f2f4418abce0e0fd8b899350" style="width: 100.0%; height: 100.0%;">Agios Vasilis - ΑΓΙΟΣ ΒΑΣΙΛΗΣ | Άγιος Βασίλης</div>`)[0];
+                popup_600ebd566c7b4708bc778cd59e511d2c.setContent(html_56792e16f2f4418abce0e0fd8b899350);
+            
+
+            marker_a701884a2ab84ec99ad4df946d5c8b4f.bindPopup(popup_600ebd566c7b4708bc778cd59e511d2c)
+            ;
+
+            
+        
+    
+        var marker_ba09816249ce4298b13c3a94b4979524 = L.marker(
+            [40.605118, 24.74169],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_a75ac02f08b84c23a37c82abc69b74bf = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba09816249ce4298b13c3a94b4979524.setIcon(icon_a75ac02f08b84c23a37c82abc69b74bf);
+            
+    
+            var popup_a01bb09347724c9d953c2bf90ed576a4 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_4f7b370d4ac04ffcbe09f1af3491c292 = $(`<div id="html_4f7b370d4ac04ffcbe09f1af3491c292" style="width: 100.0%; height: 100.0%;">Aliki - ΑΛΥΚΗ | Αλυκή</div>`)[0];
+                popup_a01bb09347724c9d953c2bf90ed576a4.setContent(html_4f7b370d4ac04ffcbe09f1af3491c292);
+            
+
+            marker_ba09816249ce4298b13c3a94b4979524.bindPopup(popup_a01bb09347724c9d953c2bf90ed576a4)
+            ;
+
+            
+        
+    
+        var marker_2218d1750ddd4b0d87359016bc5e40d2 = L.marker(
+            [40.598042, 24.695992],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_2d7f608228d543a2b032d063227019d2 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2218d1750ddd4b0d87359016bc5e40d2.setIcon(icon_2d7f608228d543a2b032d063227019d2);
+            
+    
+            var popup_fd80c49e5ed2492790b5d8bde3519194 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_bc2eaf67475a448290802023e1267a4f = $(`<div id="html_bc2eaf67475a448290802023e1267a4f" style="width: 100.0%; height: 100.0%;">Arsanas - (Afrodite) ΑΡΣΑΝΑΣ | Αρσανάς</div>`)[0];
+                popup_fd80c49e5ed2492790b5d8bde3519194.setContent(html_bc2eaf67475a448290802023e1267a4f);
+            
+
+            marker_2218d1750ddd4b0d87359016bc5e40d2.bindPopup(popup_fd80c49e5ed2492790b5d8bde3519194)
+            ;
+
+            
+        
+    
+        var marker_fc655de31ed24c56a65a9fb8ac23eae7 = L.marker(
+            [40.639202000000004, 24.515983],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_b7a58555729949f88b8c2bb3d5c39c9c = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fc655de31ed24c56a65a9fb8ac23eae7.setIcon(icon_b7a58555729949f88b8c2bb3d5c39c9c);
+            
+    
+            var popup_a97d5840dbe04cd088d125afc1feee54 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_7ca1870ed1f44f508047ed53e6623ea2 = $(`<div id="html_7ca1870ed1f44f508047ed53e6623ea2" style="width: 100.0%; height: 100.0%;">Atspas - ΑΤΣΠΑΣ | Ατσπάς</div>`)[0];
+                popup_a97d5840dbe04cd088d125afc1feee54.setContent(html_7ca1870ed1f44f508047ed53e6623ea2);
+            
+
+            marker_fc655de31ed24c56a65a9fb8ac23eae7.bindPopup(popup_a97d5840dbe04cd088d125afc1feee54)
+            ;
+
+            
+        
+    
+        var marker_f652c14225c84a9baa0d5c317f9c1b9b = L.marker(
+            [40.644664, 24.514968],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_595d20cd883a40ac88b08063d2051b83 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f652c14225c84a9baa0d5c317f9c1b9b.setIcon(icon_595d20cd883a40ac88b08063d2051b83);
+            
+    
+            var popup_040fdc62bb26492d8fb81738f595ed03 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_3220a836bc194ab8bab404ebe0948492 = $(`<div id="html_3220a836bc194ab8bab404ebe0948492" style="width: 100.0%; height: 100.0%;">Beba - ΜΠΕΜΠA | Μπέμπe</div>`)[0];
+                popup_040fdc62bb26492d8fb81738f595ed03.setContent(html_3220a836bc194ab8bab404ebe0948492);
+            
+
+            marker_f652c14225c84a9baa0d5c317f9c1b9b.bindPopup(popup_040fdc62bb26492d8fb81738f595ed03)
+            ;
+
+            
+        
+    
+        var marker_8088e437412642cc91f408529e31a860 = L.marker(
+            [40.785292, 24.665698000000003],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_f62a6791e72f4f8290db862a3e1bb47b = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8088e437412642cc91f408529e31a860.setIcon(icon_f62a6791e72f4f8290db862a3e1bb47b);
+            
+    
+            var popup_854ddf5cb0a046e7a50383859369f50d = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_4173b9e755dd4b678cd88a97187a0aca = $(`<div id="html_4173b9e755dd4b678cd88a97187a0aca" style="width: 100.0%; height: 100.0%;">Glifada - ΓΛΥΦΑΔΑ | Γλυφάδα</div>`)[0];
+                popup_854ddf5cb0a046e7a50383859369f50d.setContent(html_4173b9e755dd4b678cd88a97187a0aca);
+            
+
+            marker_8088e437412642cc91f408529e31a860.bindPopup(popup_854ddf5cb0a046e7a50383859369f50d)
+            ;
+
+            
+        
+    
+        var marker_e14f1f380b8f42c1a7a4371bab69dc94 = L.marker(
+            [40.792905, 24.632645999999998],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_52c3d0b96e07434aafe92d73d55b1284 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e14f1f380b8f42c1a7a4371bab69dc94.setIcon(icon_52c3d0b96e07434aafe92d73d55b1284);
+            
+    
+            var popup_f32865a2a38a40e58276b5bd145dc457 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_b4d1cee74b744fe5937428cef8004de1 = $(`<div id="html_b4d1cee74b744fe5937428cef8004de1" style="width: 100.0%; height: 100.0%;">Glifoneri - ΓΛΥΦΟΝΕΡΙ | Γλυφονέρι</div>`)[0];
+                popup_f32865a2a38a40e58276b5bd145dc457.setContent(html_b4d1cee74b744fe5937428cef8004de1);
+            
+
+            marker_e14f1f380b8f42c1a7a4371bab69dc94.bindPopup(popup_f32865a2a38a40e58276b5bd145dc457)
+            ;
+
+            
+        
+    
+        var marker_9638a2fadffa4f2fb9ff681571175749 = L.marker(
+            [40.793143, 24.657254000000002],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_05aa61393674450f9ad08557ec155a81 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9638a2fadffa4f2fb9ff681571175749.setIcon(icon_05aa61393674450f9ad08557ec155a81);
+            
+    
+            var popup_c3eec2ad5aa14b77a7b2c1804788253c = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_08c7c365acd84a4086b19cda47775c0c = $(`<div id="html_08c7c365acd84a4086b19cda47775c0c" style="width: 100.0%; height: 100.0%;">Glikadi - ΓΛΥΚΑΔΙ | Γλυκάδι</div>`)[0];
+                popup_c3eec2ad5aa14b77a7b2c1804788253c.setContent(html_08c7c365acd84a4086b19cda47775c0c);
+            
+
+            marker_9638a2fadffa4f2fb9ff681571175749.bindPopup(popup_c3eec2ad5aa14b77a7b2c1804788253c)
+            ;
+
+            
+        
+    
+        var marker_5dce24f66e0c44f9a73789a8a7a1ca11 = L.marker(
+            [40.571597, 24.643588],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_f34c4e9ae21147649d4c163410ae4606 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5dce24f66e0c44f9a73789a8a7a1ca11.setIcon(icon_f34c4e9ae21147649d4c163410ae4606);
+            
+    
+            var popup_0084f0281f044d058f591c15b328ea1a = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_d2727ecc071748b69de4d927a7a772d7 = $(`<div id="html_d2727ecc071748b69de4d927a7a772d7" style="width: 100.0%; height: 100.0%;">Salonikios Beach / Chill Out Beach - ΣΑΛΟΝΙΚΙΟΣ | Σαλονικιός</div>`)[0];
+                popup_0084f0281f044d058f591c15b328ea1a.setContent(html_d2727ecc071748b69de4d927a7a772d7);
+            
+
+            marker_5dce24f66e0c44f9a73789a8a7a1ca11.bindPopup(popup_0084f0281f044d058f591c15b328ea1a)
+            ;
+
+            
+        
+    
+        var marker_ba4e86dc6da94db9b1fa61d904263774 = L.marker(
+            [40.72173, 24.757261],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_caf9a2038e3b4b578a9685e3c572f6f4 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba4e86dc6da94db9b1fa61d904263774.setIcon(icon_caf9a2038e3b4b578a9685e3c572f6f4);
+            
+    
+            var popup_53f29cd8db0b4f8b949085493a65df0e = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_99577f1a91444d91944622d660395881 = $(`<div id="html_99577f1a91444d91944622d660395881" style="width: 100.0%; height: 100.0%;">Skala Panagia / Golden Beach - ΧΡΥΣΗ ΑΜΜΟΥΔΙΑ | Χρυσή Αμμουδιά</div>`)[0];
+                popup_53f29cd8db0b4f8b949085493a65df0e.setContent(html_99577f1a91444d91944622d660395881);
+            
+
+            marker_ba4e86dc6da94db9b1fa61d904263774.bindPopup(popup_53f29cd8db0b4f8b949085493a65df0e)
+            ;
+
+            
+        
+    
+        var marker_30f62b633c0e464f9fdb665c3c056593 = L.marker(
+            [40.708777000000005, 24.760077],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_d76ddb91adee441b8bc389d0c77ab0bc = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_30f62b633c0e464f9fdb665c3c056593.setIcon(icon_d76ddb91adee441b8bc389d0c77ab0bc);
+            
+    
+            var popup_ab307cca0a8e42b5be7bcdb7b50d449a = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_38511201fd3e43f4871016733277efaf = $(`<div id="html_38511201fd3e43f4871016733277efaf" style="width: 100.0%; height: 100.0%;">Skala Potamia / Golden Beach - ΧΡΥΣΗ ΑΚΤΗ | Χρυσή Ακτή</div>`)[0];
+                popup_ab307cca0a8e42b5be7bcdb7b50d449a.setContent(html_38511201fd3e43f4871016733277efaf);
+            
+
+            marker_30f62b633c0e464f9fdb665c3c056593.bindPopup(popup_ab307cca0a8e42b5be7bcdb7b50d449a)
+            ;
+
+            
+        
+    
+        var marker_ae42c54b35574d11953323c823f2ce4e = L.marker(
+            [40.642613, 24.515547],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_bf49ea8daffc42a4909313ed7f97aedf = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ae42c54b35574d11953323c823f2ce4e.setIcon(icon_bf49ea8daffc42a4909313ed7f97aedf);
+            
+    
+            var popup_bb42ba66621d473194710461cdb191f5 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_aebb78b8b514490db0a46b1856fa7916 = $(`<div id="html_aebb78b8b514490db0a46b1856fa7916" style="width: 100.0%; height: 100.0%;">Skala Maries - ΣΚΑΛΑ ΜΑΡΙΕΣ | Σκάλα Μαριές</div>`)[0];
+                popup_bb42ba66621d473194710461cdb191f5.setContent(html_aebb78b8b514490db0a46b1856fa7916);
+            
+
+            marker_ae42c54b35574d11953323c823f2ce4e.bindPopup(popup_bb42ba66621d473194710461cdb191f5)
+            ;
+
+            
+        
+    
+        var marker_ce59bfd5eb744ea58053431311b1d72a = L.marker(
+            [40.569972, 24.645895],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_9c07c24820c94ccfbadf36a8f4cb2e12 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ce59bfd5eb744ea58053431311b1d72a.setIcon(icon_9c07c24820c94ccfbadf36a8f4cb2e12);
+            
+    
+            var popup_cad201426d2944a0a7d04c0e9fc3b47c = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_3803212f98064d8b81dd69fe9324c0fb = $(`<div id="html_3803212f98064d8b81dd69fe9324c0fb" style="width: 100.0%; height: 100.0%;">Kalami - ΚΑΛΑΜΙ | Καλάμι</div>`)[0];
+                popup_cad201426d2944a0a7d04c0e9fc3b47c.setContent(html_3803212f98064d8b81dd69fe9324c0fb);
+            
+
+            marker_ce59bfd5eb744ea58053431311b1d72a.bindPopup(popup_cad201426d2944a0a7d04c0e9fc3b47c)
+            ;
+
+            
+        
+    
+        var marker_afdcc4726c99465bb85b73a2b671289b = L.marker(
+            [40.662684999999996, 24.763956],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_78d1a462123c430c9d6b106dcf1b5a19 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_afdcc4726c99465bb85b73a2b671289b.setIcon(icon_78d1a462123c430c9d6b106dcf1b5a19);
+            
+    
+            var popup_c8c5b3a0ca184a17a09ee75e76ea2194 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_cabaf74b7d9c4b0d99bf3e5a7553040e = $(`<div id="html_cabaf74b7d9c4b0d99bf3e5a7553040e" style="width: 100.0%; height: 100.0%;">Kinira - ΚΟΙΝΥΡΑ | Κοίνυρα</div>`)[0];
+                popup_c8c5b3a0ca184a17a09ee75e76ea2194.setContent(html_cabaf74b7d9c4b0d99bf3e5a7553040e);
+            
+
+            marker_afdcc4726c99465bb85b73a2b671289b.bindPopup(popup_c8c5b3a0ca184a17a09ee75e76ea2194)
+            ;
+
+            
+        
+    
+        var marker_aa70e702d7ba4c618e04b62298245b8a = L.marker(
+            [40.782776, 24.714442000000002],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_17920de7aa9f4a318e7e8879b294a6b2 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_aa70e702d7ba4c618e04b62298245b8a.setIcon(icon_17920de7aa9f4a318e7e8879b294a6b2);
+            
+    
+            var popup_462295e172064e5ebea2d3bd9cb21477 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_d19cf98a0d0642d2a2f5d44330ff5a69 = $(`<div id="html_d19cf98a0d0642d2a2f5d44330ff5a69" style="width: 100.0%; height: 100.0%;">Limanaki - ΛΙΜΑΝΑΚΙ | Λιμανάκι</div>`)[0];
+                popup_462295e172064e5ebea2d3bd9cb21477.setContent(html_d19cf98a0d0642d2a2f5d44330ff5a69);
+            
+
+            marker_aa70e702d7ba4c618e04b62298245b8a.bindPopup(popup_462295e172064e5ebea2d3bd9cb21477)
+            ;
+
+            
+        
+    
+        var marker_82577890dd4c4e2f8cb056006d7396ed = L.marker(
+            [40.62593, 24.574773999999998],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_adf5bb5baec64f749766e3c972dcba1c = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_82577890dd4c4e2f8cb056006d7396ed.setIcon(icon_adf5bb5baec64f749766e3c972dcba1c);
+            
+    
+            var popup_cbcf39aed4c1472ba8091d4e98d6d6c3 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_ecb6e8afbe414644862635afdc50a155 = $(`<div id="html_ecb6e8afbe414644862635afdc50a155" style="width: 100.0%; height: 100.0%;">Limenaria - ΛΙΜΕΝΑΡΙΑ | Λιμενάρια</div>`)[0];
+                popup_cbcf39aed4c1472ba8091d4e98d6d6c3.setContent(html_ecb6e8afbe414644862635afdc50a155);
+            
+
+            marker_82577890dd4c4e2f8cb056006d7396ed.bindPopup(popup_cbcf39aed4c1472ba8091d4e98d6d6c3)
+            ;
+
+            
+        
+    
+        var marker_a692f5a14a5e4e30bc87a17122dfde26 = L.marker(
+            [40.598214, 24.691684],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_4eacccbd31b44b959849e0a52092540f = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a692f5a14a5e4e30bc87a17122dfde26.setIcon(icon_4eacccbd31b44b959849e0a52092540f);
+            
+    
+            var popup_0067a03b256042f1a3dc80ab96efe416 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_a4ba358b3a0f40aab4aa462dfc26e5e4 = $(`<div id="html_a4ba358b3a0f40aab4aa462dfc26e5e4" style="width: 100.0%; height: 100.0%;">Livadi - ΛΙΒΑΔΙ | Λιβάδι</div>`)[0];
+                popup_0067a03b256042f1a3dc80ab96efe416.setContent(html_a4ba358b3a0f40aab4aa462dfc26e5e4);
+            
+
+            marker_a692f5a14a5e4e30bc87a17122dfde26.bindPopup(popup_0067a03b256042f1a3dc80ab96efe416)
+            ;
+
+            
+        
+    
+        var marker_92170283019148c08667bb4643a5a912 = L.marker(
+            [40.770857, 24.72579],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_7d4756bf0278437a9059e6f8f0e0ac0e = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_92170283019148c08667bb4643a5a912.setIcon(icon_7d4756bf0278437a9059e6f8f0e0ac0e);
+            
+    
+            var popup_5bfd05fbc45c4c7ca6d8ea564cdd5fc5 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_1ebc58e89f3a4885880bb3f21047710b = $(`<div id="html_1ebc58e89f3a4885880bb3f21047710b" style="width: 100.0%; height: 100.0%;">Makryammos - ΜΑΚΡΥΑΜΜΟΣ | Μακρύαμμος</div>`)[0];
+                popup_5bfd05fbc45c4c7ca6d8ea564cdd5fc5.setContent(html_1ebc58e89f3a4885880bb3f21047710b);
+            
+
+            marker_92170283019148c08667bb4643a5a912.bindPopup(popup_5bfd05fbc45c4c7ca6d8ea564cdd5fc5)
+            ;
+
+            
+        
+    
+        var marker_cd264bf7dfc745d2b3f3f2bb1a316f6b = L.marker(
+            [40.623781, 24.582796],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_ac1898516c9249e69a5ba6ae551d489d = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cd264bf7dfc745d2b3f3f2bb1a316f6b.setIcon(icon_ac1898516c9249e69a5ba6ae551d489d);
+            
+    
+            var popup_4d6df60dac904348b085868a6bb305db = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_c945ab2cc6ff4cc3bcfeb99b2957eee3 = $(`<div id="html_c945ab2cc6ff4cc3bcfeb99b2957eee3" style="width: 100.0%; height: 100.0%;">Metalia - ΜΕΤΑΛΛΕΙΑ | Μεταλλεία</div>`)[0];
+                popup_4d6df60dac904348b085868a6bb305db.setContent(html_c945ab2cc6ff4cc3bcfeb99b2957eee3);
+            
+
+            marker_cd264bf7dfc745d2b3f3f2bb1a316f6b.bindPopup(popup_4d6df60dac904348b085868a6bb305db)
+            ;
+
+            
+        
+    
+        var marker_bdd5e9dd5b8749b88fe7fc61c6cb45a3 = L.marker(
+            [40.778948, 24.686168],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_62447dfbb463464cb0bc10ec1ca6a248 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bdd5e9dd5b8749b88fe7fc61c6cb45a3.setIcon(icon_62447dfbb463464cb0bc10ec1ca6a248);
+            
+    
+            var popup_de2cea04c2af47aa83ad19c4f336ab48 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_6b957bcbb77d4b268f37f6b544289d5e = $(`<div id="html_6b957bcbb77d4b268f37f6b544289d5e" style="width: 100.0%; height: 100.0%;">Nisteri - ΝΥΣΤΕΡΙ | Νυστέρι</div>`)[0];
+                popup_de2cea04c2af47aa83ad19c4f336ab48.setContent(html_6b957bcbb77d4b268f37f6b544289d5e);
+            
+
+            marker_bdd5e9dd5b8749b88fe7fc61c6cb45a3.bindPopup(popup_de2cea04c2af47aa83ad19c4f336ab48)
+            ;
+
+            
+        
+    
+        var marker_b5319f2a519a4cbdaa112a9456c2c245 = L.marker(
+            [40.789947999999995, 24.627314000000002],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_5b3145cdb4bb45e7a8b45c5fd608c2c8 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b5319f2a519a4cbdaa112a9456c2c245.setIcon(icon_5b3145cdb4bb45e7a8b45c5fd608c2c8);
+            
+    
+            var popup_6ee2a11f999f495ea23ef04d32e1ccb4 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_40f6995c76204b1bbd51e09a10e4a1a0 = $(`<div id="html_40f6995c76204b1bbd51e09a10e4a1a0" style="width: 100.0%; height: 100.0%;">Pachis - ΠΑΧΥΣ | Παχύς</div>`)[0];
+                popup_6ee2a11f999f495ea23ef04d32e1ccb4.setContent(html_40f6995c76204b1bbd51e09a10e4a1a0);
+            
+
+            marker_b5319f2a519a4cbdaa112a9456c2c245.bindPopup(popup_6ee2a11f999f495ea23ef04d32e1ccb4)
+            ;
+
+            
+        
+    
+        var marker_9ce715c1314d48158e9c9606104cd2a0 = L.marker(
+            [40.644962, 24.767042],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_bf1392ddadb443f3a372cb376ffddb7e = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9ce715c1314d48158e9c9606104cd2a0.setIcon(icon_bf1392ddadb443f3a372cb376ffddb7e);
+            
+    
+            var popup_79e8d16d387a4e1ea20a8c540bc9a1f8 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_7c4a5506721543509a56bbad5904ea99 = $(`<div id="html_7c4a5506721543509a56bbad5904ea99" style="width: 100.0%; height: 100.0%;">Paradise - ΠΑΡΑΔΕΙΣΟΣ | Παράδεισος</div>`)[0];
+                popup_79e8d16d387a4e1ea20a8c540bc9a1f8.setContent(html_7c4a5506721543509a56bbad5904ea99);
+            
+
+            marker_9ce715c1314d48158e9c9606104cd2a0.bindPopup(popup_79e8d16d387a4e1ea20a8c540bc9a1f8)
+            ;
+
+            
+        
+    
+        var marker_082a6efc6905484ab8b07a9b198e6eaf = L.marker(
+            [40.617538, 24.59722],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_5c882f93fc564a79ace6244794b8993b = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_082a6efc6905484ab8b07a9b198e6eaf.setIcon(icon_5c882f93fc564a79ace6244794b8993b);
+            
+    
+            var popup_15d608fbf64f411c910270f60950b224 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_6a7c07656c1145f0bfa0d7b12bd5fbc7 = $(`<div id="html_6a7c07656c1145f0bfa0d7b12bd5fbc7" style="width: 100.0%; height: 100.0%;">Pefkari - ΠΕΥΚΑΡΙ | Πευκάρι</div>`)[0];
+                popup_15d608fbf64f411c910270f60950b224.setContent(html_6a7c07656c1145f0bfa0d7b12bd5fbc7);
+            
+
+            marker_082a6efc6905484ab8b07a9b198e6eaf.bindPopup(popup_15d608fbf64f411c910270f60950b224)
+            ;
+
+            
+        
+    
+        var marker_a0f502750de74cc0b9152a2564b82bb2 = L.marker(
+            [40.608702, 24.606842999999998],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_d8c811ee311142ca900f36b54ff13992 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a0f502750de74cc0b9152a2564b82bb2.setIcon(icon_d8c811ee311142ca900f36b54ff13992);
+            
+    
+            var popup_27c65631bcb54aa2b7dc1bf484371254 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_6c08480b7f6e410a931259865f7a598b = $(`<div id="html_6c08480b7f6e410a931259865f7a598b" style="width: 100.0%; height: 100.0%;">Potos - ΠΟΤΟΣ | Ποτός</div>`)[0];
+                popup_27c65631bcb54aa2b7dc1bf484371254.setContent(html_6c08480b7f6e410a931259865f7a598b);
+            
+
+            marker_a0f502750de74cc0b9152a2564b82bb2.bindPopup(popup_27c65631bcb54aa2b7dc1bf484371254)
+            ;
+
+            
+        
+    
+        var marker_c603d36771bb42a7b149f88ae4cd7c28 = L.marker(
+            [40.583551, 24.638748],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_3e2b02a1a5db461f8dd89fca35495672 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c603d36771bb42a7b149f88ae4cd7c28.setIcon(icon_3e2b02a1a5db461f8dd89fca35495672);
+            
+    
+            var popup_0b93673ebd7745d2be33a19af4174f04 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_08add0e195354b94bdd511fca16ce574 = $(`<div id="html_08add0e195354b94bdd511fca16ce574" style="width: 100.0%; height: 100.0%;">Psili Ammos - ΨΙΛΗ ΑΜΜΟΣ | Ψιλή άμμος</div>`)[0];
+                popup_0b93673ebd7745d2be33a19af4174f04.setContent(html_08add0e195354b94bdd511fca16ce574);
+            
+
+            marker_c603d36771bb42a7b149f88ae4cd7c28.bindPopup(popup_0b93673ebd7745d2be33a19af4174f04)
+            ;
+
+            
+        
+    
+        var marker_b8f9fdcb93cb4a5aa6058f6270fd7313 = L.marker(
+            [40.75034, 24.74772],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_d46af2f2254e4783922947468f6b5020 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b8f9fdcb93cb4a5aa6058f6270fd7313.setIcon(icon_d46af2f2254e4783922947468f6b5020);
+            
+    
+            var popup_771b0ed76fe540589a531a6979864694 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_646789113ba24effbdf578d380cc7fd6 = $(`<div id="html_646789113ba24effbdf578d380cc7fd6" style="width: 100.0%; height: 100.0%;">Saliara - ΣΑΛΙΑΡΑ | Σαλιάρα</div>`)[0];
+                popup_771b0ed76fe540589a531a6979864694.setContent(html_646789113ba24effbdf578d380cc7fd6);
+            
+
+            marker_b8f9fdcb93cb4a5aa6058f6270fd7313.bindPopup(popup_771b0ed76fe540589a531a6979864694)
+            ;
+
+            
+        
+    
+        var marker_01d92ded12fe402b9b418aefc341285f = L.marker(
+            [40.710555, 24.533701],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_66087110d7e54ccd8e3d054977138dfc = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_01d92ded12fe402b9b418aefc341285f.setIcon(icon_66087110d7e54ccd8e3d054977138dfc);
+            
+    
+            var popup_c45396173ac04f97a55263881e9b1ec4 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_b8752c682fc046f2b097d6e555d14680 = $(`<div id="html_b8752c682fc046f2b097d6e555d14680" style="width: 100.0%; height: 100.0%;">Skala Kalirachi - ΣΚΑΛΑ ΚΑΛΛΙΡΑΧΗΣ | Σκάλα Καλλιράχης</div>`)[0];
+                popup_c45396173ac04f97a55263881e9b1ec4.setContent(html_b8752c682fc046f2b097d6e555d14680);
+            
+
+            marker_01d92ded12fe402b9b418aefc341285f.bindPopup(popup_c45396173ac04f97a55263881e9b1ec4)
+            ;
+
+            
+        
+    
+        var marker_03d825f980dc4c1397492c8a7bbbded7 = L.marker(
+            [40.755645, 24.561052],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_9c8de603000d46fda490bfa58d728e83 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_03d825f980dc4c1397492c8a7bbbded7.setIcon(icon_9c8de603000d46fda490bfa58d728e83);
+            
+    
+            var popup_a93a805e1a95444ca1cd15d4cbae0ad7 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_7c92d8f6b7c749878596c6c8d4471ae2 = $(`<div id="html_7c92d8f6b7c749878596c6c8d4471ae2" style="width: 100.0%; height: 100.0%;">Skala Prinos - ΣΚΑΛΑ ΠΡΙΝΟΥ | Σκάλα Πρίνου</div>`)[0];
+                popup_a93a805e1a95444ca1cd15d4cbae0ad7.setContent(html_7c92d8f6b7c749878596c6c8d4471ae2);
+            
+
+            marker_03d825f980dc4c1397492c8a7bbbded7.bindPopup(popup_a93a805e1a95444ca1cd15d4cbae0ad7)
+            ;
+
+            
+        
+    
+        var marker_6618fd5844814ed39f97f652547dd796 = L.marker(
+            [40.776626, 24.598485],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_04f25f797d3046c19f6e30a1c8e1eaae = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6618fd5844814ed39f97f652547dd796.setIcon(icon_04f25f797d3046c19f6e30a1c8e1eaae);
+            
+    
+            var popup_d3d74ff0cd3e4f27a63569b0c9b29d80 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_8eaac09897324ce68b796fb67af4cfc9 = $(`<div id="html_8eaac09897324ce68b796fb67af4cfc9" style="width: 100.0%; height: 100.0%;">Skala Rachoni - ΣΚΑΛΑ ΡΑΧΩΝΙ | Σκάλα Ραχώνι</div>`)[0];
+                popup_d3d74ff0cd3e4f27a63569b0c9b29d80.setContent(html_8eaac09897324ce68b796fb67af4cfc9);
+            
+
+            marker_6618fd5844814ed39f97f652547dd796.bindPopup(popup_d3d74ff0cd3e4f27a63569b0c9b29d80)
+            ;
+
+            
+        
+    
+        var marker_66baa654b65340ce90a38376151229b5 = L.marker(
+            [40.777895, 24.691406],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_4c5200e00819459e93b381b2c5160adc = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_66baa654b65340ce90a38376151229b5.setIcon(icon_4c5200e00819459e93b381b2c5160adc);
+            
+    
+            var popup_6e55b94d4fd04309abec07c9f259245a = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_519c7607fbc14219841887d1d955e091 = $(`<div id="html_519c7607fbc14219841887d1d955e091" style="width: 100.0%; height: 100.0%;">Tarsanas - ΤΑΡΣΑΝΑΣ | Ταρσανάς</div>`)[0];
+                popup_6e55b94d4fd04309abec07c9f259245a.setContent(html_519c7607fbc14219841887d1d955e091);
+            
+
+            marker_66baa654b65340ce90a38376151229b5.bindPopup(popup_6e55b94d4fd04309abec07c9f259245a)
+            ;
+
+            
+        
+    
+        var marker_cc968fea39f946e187524086f4d1368d = L.marker(
+            [40.605678999999995, 24.72146],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_47af9ec8f27b4578ac2ccd83ab96a69f = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cc968fea39f946e187524086f4d1368d.setIcon(icon_47af9ec8f27b4578ac2ccd83ab96a69f);
+            
+    
+            var popup_a9eab9bddffc464b8c617ac1e8d75f82 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_f76ee5cc3ddc49ad8ec110bcb42d5e6e = $(`<div id="html_f76ee5cc3ddc49ad8ec110bcb42d5e6e" style="width: 100.0%; height: 100.0%;">Thimonia - ΘΥΜΩΝΙΑ | Θυμωνιά</div>`)[0];
+                popup_a9eab9bddffc464b8c617ac1e8d75f82.setContent(html_f76ee5cc3ddc49ad8ec110bcb42d5e6e);
+            
+
+            marker_cc968fea39f946e187524086f4d1368d.bindPopup(popup_a9eab9bddffc464b8c617ac1e8d75f82)
+            ;
+
+            
+        
+    
+        var marker_0b8a88d966f5496a96c287cca9d9edb0 = L.marker(
+            [40.623338000000004, 24.542845],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_740a2dde81f946f0b7ff385cb42058b5 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0b8a88d966f5496a96c287cca9d9edb0.setIcon(icon_740a2dde81f946f0b7ff385cb42058b5);
+            
+    
+            var popup_1634445c01c04591bfa8f55b47d7cca8 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_7c997464c3224544bcc643946a5e9650 = $(`<div id="html_7c997464c3224544bcc643946a5e9650" style="width: 100.0%; height: 100.0%;">Tripiti - ΤΡΥΠΗΤΗ | Τρυπητή</div>`)[0];
+                popup_1634445c01c04591bfa8f55b47d7cca8.setContent(html_7c997464c3224544bcc643946a5e9650);
+            
+
+            marker_0b8a88d966f5496a96c287cca9d9edb0.bindPopup(popup_1634445c01c04591bfa8f55b47d7cca8)
+            ;
+
+            
+        
+    
+        var marker_9a477e57034e4f3c90e4374ee7b9c350 = L.marker(
+            [40.744312, 24.767532],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_3f74ce9c09ed49619856fd368668a5d9 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9a477e57034e4f3c90e4374ee7b9c350.setIcon(icon_3f74ce9c09ed49619856fd368668a5d9);
+            
+    
+            var popup_46699f4f06d84054aeed3b20460d3883 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_e957f90efa62425ca43b3ac66bb99a8d = $(`<div id="html_e957f90efa62425ca43b3ac66bb99a8d" style="width: 100.0%; height: 100.0%;">Vathi - ΒΑΘΥ | Βάθυ</div>`)[0];
+                popup_46699f4f06d84054aeed3b20460d3883.setContent(html_e957f90efa62425ca43b3ac66bb99a8d);
+            
+
+            marker_9a477e57034e4f3c90e4374ee7b9c350.bindPopup(popup_46699f4f06d84054aeed3b20460d3883)
+            ;
+
+            
+        
+    
+        var marker_c5d7fa4adcb34b5dbe8496cb3fffdd7c = L.marker(
+            [40.783581, 24.66846],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+        
+    
+
+                var icon_7d3bd58d09714a9db0850f8e20325327 = L.AwesomeMarkers.icon({
+                    icon: 'bicycle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c5d7fa4adcb34b5dbe8496cb3fffdd7c.setIcon(icon_7d3bd58d09714a9db0850f8e20325327);
+            
+    
+            var popup_c7c6f30da8b24185b1a801d35c36bb97 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_c68f3b09b48e4b2e9f67bf788c5e1e6a = $(`<div id="html_c68f3b09b48e4b2e9f67bf788c5e1e6a" style="width: 100.0%; height: 100.0%;">Papalimani - ΠΑΠΑΛΙΜΑΝΙ | Παπαλιμάνι</div>`)[0];
+                popup_c7c6f30da8b24185b1a801d35c36bb97.setContent(html_c68f3b09b48e4b2e9f67bf788c5e1e6a);
+            
+
+            marker_c5d7fa4adcb34b5dbe8496cb3fffdd7c.bindPopup(popup_c7c6f30da8b24185b1a801d35c36bb97)
+            ;
+
+            
+        
+    
+            var circle_marker_371f4f816ba84c0db22a293ee556e600 = L.circleMarker(
+                [40.6, 24.5],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3388ff",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#3388ff",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 20,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(feature_group_b7bf060de7a0463995f78c1b021f2c1c);
+            
+    
+                function newMarker(e){
+                    var new_mark = L.marker().setLatLng(e.latlng).addTo(map_a16c88edd14f4d1797cb1704c4b155af);
+                    new_mark.dragging.enable();
+                    new_mark.on('dblclick', function(e){ map_a16c88edd14f4d1797cb1704c4b155af.removeLayer(e.target)})
+                    var lat = e.latlng.lat.toFixed(4),
+                       lng = e.latlng.lng.toFixed(4);
+                    new_mark.bindPopup("Latitude: " + lat + "<br>Longitude: " + lng );
+                    };
+                map_a16c88edd14f4d1797cb1704c4b155af.on('click', newMarker);
+            
+</script>
