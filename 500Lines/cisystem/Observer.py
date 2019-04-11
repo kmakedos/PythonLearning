@@ -8,14 +8,15 @@ class Observer:
         port = 9000
         s.bind((host, port))
         s.listen(5)
+        print("Listening to %s:%s" % (host, port))
 
         while True:
             c,addr = s.accept()
             print("Got connection from ",  addr)
-            mesg = c.recv()
-            c.sendall('thank you for connecting')
-            c.close()
+            mesg = c.recv(20)
+            print(mesg.decode())
 
+        c.close()
 ob = Observer()
 
 
