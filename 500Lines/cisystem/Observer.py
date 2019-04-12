@@ -13,7 +13,7 @@ class Observer:
         while True:
             c,addr = s.accept()
             print("Got connection from ",  addr)
-            mesg = c.recv(20)
+            mesg = c.recv(16)
             print(mesg.decode())
 
         c.close()
