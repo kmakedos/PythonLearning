@@ -9,7 +9,7 @@ class Dispatcher:
 
 
     def _send_message(self, msg):
-        self._socket.sendall(msg.encode())
+        self._socket.sendall(msg)
 
     def put(self, item):
         self._queue.put(item)
@@ -18,7 +18,7 @@ class Dispatcher:
         while not self._queue.empty():
             self._send_message(self._queue.get())
 
-df = Dispatcher("Lubi", 9000)
+df = Dispatcher("192.168.2.110", 9000)
 for x in range(10):
-    df.put(str(x))
+    df.put(x)
 df.run()
