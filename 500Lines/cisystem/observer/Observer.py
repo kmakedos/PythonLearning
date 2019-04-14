@@ -1,4 +1,14 @@
+
+
+#  Developed by Kostas Makedos
+#  kostas.makedos@gmail.com : 14/4/2019 7:17 μμ
+#  Last Modified 14/4/2019 7:13 μμ
+#  Copyright (c) 2019.
+#  All rights reserved.
+
 import socket
+
+
 class Observer:
     def __init__(self):
         print("Observer started")
@@ -11,13 +21,12 @@ class Observer:
         print("Listening to %s:%s" % (host, port))
 
         while True:
-            c,addr = s.accept()
-            print("Got connection from ",  addr)
+            c, addr = s.accept()
+            print("Got connection from ", addr)
             mesg = c.recv(16)
             print(mesg.decode())
 
         c.close()
+
+
 ob = Observer()
-
-
-
