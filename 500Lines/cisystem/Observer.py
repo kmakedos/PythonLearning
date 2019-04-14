@@ -15,18 +15,20 @@ class Observer:
         while True:
             c,addr = self._socket.accept()
             print("Got connection from ",  addr)
-            c.shutdown(socket.SHUT_WR)
-            mesg = self._recv_all(c, 6)
-            print(mesg)
-        c.close()
+            while True:
+                mesg = self._recv_all(c, 1024)
+                if mesg:
+                    print(mesg)
+                else:
+                    break
 
     def _recv_all(self, client_socket, length):
         data = ''
         while len(data) < length:
             more = client_socket.recv(length - len(data))
             if not more:
-                raise EOFError('socket closed %d bytes int a %d-byte message' % (len(data), length))
-            data += more
+                return data
+            data += more.decode()
         return data
 
 ob = Observer()
