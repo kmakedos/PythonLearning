@@ -1,9 +1,9 @@
 
 
-#  Developed by Kostas Makedos
-#  kostas.makedos@gmail.com : 14/4/2019 7:17 μμ
-#  Last Modified 14/4/2019 7:13 μμ
-#  Copyright (c) 2019.
+#  Developed by Kostas.Makedos
+#  kostas.makedos@gmail.com: 4/14/19, 9:52 PM
+#  Last Modified 4/14/19, 7:32 PM
+#  Copyright (c) 2019
 #  All rights reserved.
 
 import socket

@@ -1,3 +1,9 @@
+#  Developed by Kostas.Makedos
+#  kostas.makedos@gmail.com: 4/14/19, 9:52 PM
+#  Last Modified 4/14/19, 9:42 PM
+#  Copyright (c) 2019
+#  All rights reserved.
+
 import socket
 class Observer:
     def __init__(self):
@@ -22,14 +28,6 @@ class Observer:
                 else:
                     break
 
-    def _recv_all(self, client_socket, length):
-        data = ''
-        while len(data) < length:
-            more = client_socket.recv(length - len(data))
-            if not more:
-                return data
-            data += more.decode()
-        return data
 
 ob = Observer()
 
