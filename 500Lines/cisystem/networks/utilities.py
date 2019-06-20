@@ -7,7 +7,7 @@
 
 import socketserver
 import socket
-
+import threading
 
 class RequestHandler(socketserver.BaseRequestHandler):
     """
@@ -21,16 +21,20 @@ class RequestHandler(socketserver.BaseRequestHandler):
         print("{} wrote:".format(self.client_address[0]))
         print(self.data)
 
+class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    pass
 
 class Server():
 
     def __init__(self, host="0.0.0.0", port=9000):
-        self.server = socketserver.TCPServer((host, port), RequestHandler)
-        self.server.allow_reuse_address = True
+        self.server = ThreadingSocketServer((host, port), RequestHandler)
 
-    def run(self):
-        with self.server:
-            self.server.serve_forever()
+    def start(self):
+        server_thread = threading.Thread(target = self.server.serve_forever)
+        server_thread.daemon = True
+        server_thread.allow_reuse_address = True
+        server_thread.start()
+   
 
 class Client:
     def __init__(self, hostIP="0.0.0.0", port=9000):
@@ -38,6 +42,6 @@ class Client:
         self._hostIP = hostIP
         self._port = port
         
-    def send_message(self, message):
+    def send_message(self, message="Hello"):
         self._socket.connect(((self._hostIP, self._port)))
         self._socket.send(message.encode())

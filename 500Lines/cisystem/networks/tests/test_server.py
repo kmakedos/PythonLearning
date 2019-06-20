@@ -1,21 +1,16 @@
 from unittest import TestCase
 import socket
 from networks import utilities
-import multiprocessing
 
 
 
 class TestConnections(TestCase):
     def setUp(self):
-        pass
+        self.server = utilities.Server()
+        client = utilities.Client()
 
     def test_run(self):
-        self.serverProcess = multiprocessing.Process(name = utilities.Server.run)
-        self.clientProcess = multiprocessing.Process(name = utilities.Client)
-        self.serverProcess.start()
-        self.clientProcess.start()
-        self.serverProcess.join()
-        self.clientProcess.join()
+        self.server.start()
 
 
 
