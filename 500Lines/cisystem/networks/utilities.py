@@ -27,6 +27,7 @@ class Server():
 
     def __init__(self, host="0.0.0.0", port=9000):
         self.server = ThreadingSocketServer((host, port), RequestHandler)
+        self.server_data = None
 
     def start(self):
         self.server_thread = threading.Thread(target = self.server.serve_forever)
