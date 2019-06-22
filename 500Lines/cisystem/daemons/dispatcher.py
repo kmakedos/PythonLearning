@@ -4,14 +4,14 @@
 #  Copyright (c) 2019
 #  All rights reserved.
 
-from networks import utilities
+from networks import netutils
 import queue
 
 
 class Dispatcher:
-    def __init__(self):
+    def __init__(self, config_path="config.ini"):
         self._queue = queue.Queue()
-        self.server = utilities.Server()
+        self.server = netutils.Server(config_path)
 
     def put(self, item):
         self._queue.put(item)

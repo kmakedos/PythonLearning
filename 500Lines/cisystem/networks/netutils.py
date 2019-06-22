@@ -7,6 +7,7 @@
 import socketserver
 import socket
 import threading
+import configparser
 
 class RequestHandler(socketserver.BaseRequestHandler):
     """
@@ -25,7 +26,11 @@ class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer)
 
 class Server():
 
-    def __init__(self, host="0.0.0.0", port=9000):
+    def __init__(self, config_path='config.ini'):
+        self.config = configparser.ConfigParser()
+        self.config.read(config_path)
+        host = self.config['default']['Host']
+        port = int(self.config['default']['Port'])
         self.server = ThreadingSocketServer((host, port), RequestHandler)
         self.server_data = None
 
@@ -38,10 +43,12 @@ class Server():
 
 
 class Client:
-    def __init__(self, host="0.0.0.0", port=9000):
+    def __init__(self,config_path="config.ini"):
+        self.config = configparser.ConfigParser()
+        self.config.read(config_path)
+        self._host = self.config['default']['Host']
+        self._port = int(self.config['default']['Port'])
         self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self._host = host
-        self._port = port
 
     def send_message(self, message="Hello"):
         if message is not None:

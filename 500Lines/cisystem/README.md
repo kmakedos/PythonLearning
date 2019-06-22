@@ -64,10 +64,10 @@ details?
 - UI should be last
 
 ### Implementation progress
-- networks/utilities module with a server and a client in tcp for exchanging messages
+- networks/netutils module with a server and a client in tcp for exchanging messages
 - daemons module with an observer and a dispatcher with corresponding classes inside.
-- Observer class just creates a client from networks/utilities module to send a message in a server listening to a port (now 9000)
-- Dispatcher class creates a server from networks/utilities module to receive messages from any client like observer
+- Observer class just creates a client from networks/netutils module to send a message in a server listening to a port (now 9000)
+- Dispatcher class creates a server from networks/netutils module to receive messages from any client like observer
 
 ### Next steps
 - I am thinking if observer should also wait on a port for messages but not sure.
