@@ -8,18 +8,7 @@ import socketserver
 import socket
 import threading
 import configparser
-
-class RequestHandler(socketserver.BaseRequestHandler):
-    """
-    The request handler must be instantiated once per connection and must
-    override the handle() method to implement communication to the client
-    """
-
-    def handle(self):
-        # self.request is the TCP socket connected to the client
-        self.data = self.request.recv(1024).strip()
-        print("{} wrote:".format(self.client_address[0]))
-        print(self.data)
+from networks import request_handler
 
 class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
@@ -31,7 +20,7 @@ class Server():
         self.config.read(config_path)
         host = self.config['default']['Host']
         port = int(self.config['default']['Port'])
-        self.server = ThreadingSocketServer((host, port), RequestHandler)
+        self.server = ThreadingSocketServer((host, port), request_handler.RequestHandler)
         self.server_data = None
 
     def start(self):
