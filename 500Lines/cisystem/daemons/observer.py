@@ -11,3 +11,5 @@ class Observer:
 
     def start(self):
         self.client.send_message("Observer started")
+
+
