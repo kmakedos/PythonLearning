@@ -15,12 +15,12 @@ class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer)
 
 class Server():
 
-    def __init__(self, config_path='config.ini'):
+    def __init__(self, config_path='config.ini', handler = request_handler.RequestHandler):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
         host = self.config['default']['Host']
         port = int(self.config['default']['Port'])
-        self.server = ThreadingSocketServer((host, port), request_handler.RequestHandler)
+        self.server = ThreadingSocketServer((host, port), handler)
         self.server_data = None
 
     def start(self):

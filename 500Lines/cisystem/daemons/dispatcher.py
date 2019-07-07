@@ -4,14 +4,22 @@
 #  Copyright (c) 2019
 #  All rights reserved.
 
-from networks import netutils
-import queue
 
+import queue
+import socketserver
+from networks import netutils
+
+class Handler(socketserver.BaseRequestHandler):
+    def handle(self):
+        self.data = self.request.recv(1024).strip()
+        print("Dispatcher received : ", self.data)
+        # Here the message which should be a job description
+        # should be put in the queue and an appropriate worker should pick it
 
 class Dispatcher:
     def __init__(self, config_path="config.ini"):
         self._queue = queue.Queue()
-        self.server = netutils.Server(config_path)
+        self.server = netutils.Server(config_path, Handler)
 
     def put(self, item):
         self._queue.put(item)
