@@ -57,7 +57,7 @@ details?
 - What happens when a TaskRunner is assigned a job? It should be removed from the Queue and give access to UI
 - Seems that UI should have an async system receiving events from every component running.
 
-### Design decisions
+### Design decisions I
 - Start simple
 - Create basic classes with unit tests
 - Networking should be probably in its own class
@@ -74,3 +74,18 @@ details?
 - Override HandleRequest class from Server inside Dispatcher and make it handle messages coming in.
 - Add configuration reading from a config file for all modules/classes to share config between them
 - Add logging to check for errors
+
+
+### New additions as of 8th July 2019
+New system as designed until now:
+- A ui system that has two internal structures: A queue for holding jobs and a list for easily mapping the queue in a parsable
+structure. This decision was made because in the future, jobs will be objects with a state and we do not want to map queue in a list for
+every user interaction
+- Daemons folder has also an observer and a dispatcher. Observer will be running polling git for jobs in queue (the one in ui)
+and when finds an update it will send a message to the listening socket of dispatcher.
+- Dispatcher will listen to a specific port, there is a configuration file reading facility ready for that, and when a new update
+arrives will call a build on the corresponding job.
+- In general the workflow will be like this: UI accepts user jobs and puts them in a queue, dispatcher will be notified for those who should be 
+running with a message from ui, observer will watch for changes in git to also call dispatcher.
+- Dispatcher will also maintain a queue of workers and when a message arrives it will spawn one, run the build job and return 
+result when ready on UI.
