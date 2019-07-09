@@ -1,12 +1,14 @@
 import configparser
-import queue
+from networks import netutils
+from models import job
 
-class UI():
+
+class UI(object):
 
     def __init__(self, config_path = "config/config.ini"):
         print("UI initiated")
-        self._queue = queue.Queue()
-        self.job_list = []
+        self.jobs = dict()
+        self._client = netutils.Client()
 
     def start(self):
         res = self.menu()
@@ -49,53 +51,50 @@ class UI():
             return None
 
     def _list_jobs(self):
-        print("Listing jobs in queue")
-        for item in self.job_list:
-            print(">{}", item)
+        print("Listing jobs")
+        for name, details in self.jobs.items():
+            print(details)
 
-    def _get_job_name(self):
-        job_name = input("Please enter your job name:")
-        return job_name
+    def _get_job_name(self, message="Please enter job name:", exist=True):
+        job_name = input(message)
+        if exist and job_name not in self.jobs.keys():
+            print("Error, job name not found")
+            return None
+        else:
+            return job_name
 
     def add_job(self):
         print("Adding new job to queue")
-        job_name = self._get_job_name()
-        self.job_list.append(job_name)
-        self._queue.put(job_name)
+        job_name = self._get_job_name(exist=False)
+        job_scm = input("Please give me job SCM url (eg. github):")
+        job_instructions = input("Please provide build command for job:")
+        self.jobs[job_name] = job.Job(job_name, job_scm, job_instructions)
 
     def delete_job(self):
         self._list_jobs()
         print("Deleting job from queue")
-        job_name = self._get_job_name()
-        if job_name in self.job_list:
-            self._queue.get(job_name)
-            self.job_list.remove(job_name)
+        job_name = self._get_job_name("Please select job to delete")
+        del self.jobs[job_name]
 
     def update_job(self):
         self._list_jobs()
+        job_name = self._get_job_name("Please select job to update")
         print("Updating job in job queue")
-        job_name = self._get_job_name()
-        if job_name in self.job_list:
-            #self.job_list.remove(job_name)
-            temp_job = self._queue.get(job_name)
-            # Do some work updating here
-            self._queue.put(temp_job)
-            #self.job_list.append(temp_job)
+        item = self.jobs[job_name]
+        job_name = self._get_job_name("Please enter new job name:", exist=False)
+        job_scm = input("Please give me job SCM url (eg. github):")
+        job_instructions = input("Please provide build command for job:")
+        item.data['name'] = job_name
+        item.data['scm_url'] = job_scm
+        item.data['instructions'] = job_instructions
 
     def run_job(self):
         self._list_jobs()
-        print("Running job in queue")
-        job_name = self._get_job_name()
-        if job_name in self.job_list:
-            # Run job by invoking some kind of remote call
-            print("Setting state of job")
+        job_name = self._get_job_name("Please select job to run")
+        self.jobs[job_name].state = "R"
 
     def stop_job(self):
         self._list_jobs()
         print("Stopping job in queue")
-        job_name = self._get_job_name()
-        if job_name in self.job_list:
-            # Run job by invoking some kind of remote call
-            print("Setting state of job")
-
-
+        job_name = self._get_job_name("Please select job to stop")
+        self.jobs[job_name].state = "S"

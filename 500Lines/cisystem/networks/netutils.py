@@ -28,11 +28,10 @@ class Server():
         self.server_thread.daemon = True
         self.server_thread.allow_reuse_address = True
         self.server_thread.start()
-        print("Server running in thread: ", self.server_thread)
 
 
 class Client:
-    def __init__(self,config_path="config.ini"):
+    def __init__(self, config_path="config/config.ini"):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
         self._host = self.config['default']['Host']

@@ -17,9 +17,9 @@ class Handler(socketserver.BaseRequestHandler):
         # should be put in the queue and an appropriate worker should pick it
 
 class Dispatcher:
-    def __init__(self, config_path="config.ini"):
-        self._queue = queue.Queue()
+    def __init__(self, config_path="config/config.ini"):
         self.server = netutils.Server(config_path, Handler)
+        self._queue = queue.Queue()
 
     def put(self, item):
         self._queue.put(item)

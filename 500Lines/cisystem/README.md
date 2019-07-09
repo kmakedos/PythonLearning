@@ -81,7 +81,7 @@ New system as designed until now:
 - A ui system that has two internal structures: A queue for holding jobs and a list for easily mapping the queue in a parsable
 structure. This decision was made because in the future, jobs will be objects with a state and we do not want to map queue in a list for
 every user interaction
-- Daemons folder has also an observer and a dispatcher. Observer will be running polling git for jobs in queue (the one in ui)
+- Daemons folder has also an observer and a dispatcher. Observer will be polling git for jobs in queue (the one in ui)
 and when finds an update it will send a message to the listening socket of dispatcher.
 - Dispatcher will listen to a specific port, there is a configuration file reading facility ready for that, and when a new update
 arrives will call a build on the corresponding job.
@@ -89,3 +89,19 @@ arrives will call a build on the corresponding job.
 running with a message from ui, observer will watch for changes in git to also call dispatcher.
 - Dispatcher will also maintain a queue of workers and when a message arrives it will spawn one, run the build job and return 
 result when ready on UI.
+
+
+### Decisions in 10th of July 2019
+- UI should NOT have an internal queue. Internal queue should be inside Dispatcher.
+- UI will have a dictionary holding job data. A new structure for jobs should be created.
+- When a job in UI changes, as an instruction from user, a message should be sent to Dispatcher to inform him of our intentions.
+- Dispatcher will always run a server and report state of jobs.
+- In order for UI to know current state of jobs, dispatcher should probably post in its port (in a different url), a list of jobs and their state
+So after updating we will need: 
+1. A new Job class to hold jobs data (url for scm, build instructions, state).
+2. This class should also offer a way to (de)serialize itself to be send as a message to Dispatcher.
+3. A method to redirect url in our dispatcher server to different methods
+4. A handler for the state request
+5. An observer that will poll SCM and send also a message to create jobs
+6. A queue of jobs in Dispatcher that will hold current work to be done
+7. A pool of workers in Dispatcher that will consume Job Queue.
