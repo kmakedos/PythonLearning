@@ -15,11 +15,11 @@ class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer)
 
 class Server():
 
-    def __init__(self, config_path='config.ini', handler = request_handler.RequestHandler):
+    def __init__(self, config_path='config.ini', target='default', handler=request_handler.RequestHandler):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
-        host = self.config['default']['Host']
-        port = int(self.config['default']['Port'])
+        host = self.config[target]['Host']
+        port = int(self.config[target]['Port'])
         self.server = ThreadingSocketServer((host, port), handler)
         self.server_data = None
 
@@ -31,11 +31,11 @@ class Server():
 
 
 class Client:
-    def __init__(self, config_path="config/config.ini"):
+    def __init__(self, config_path="config/config.ini", target='default'):
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
-        self._host = self.config['default']['Host']
-        self._port = int(self.config['default']['Port'])
+        self._host = self.config[target]['Host']
+        self._port = int(self.config[target]['Port'])
         self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def send_message(self, message="Hello"):

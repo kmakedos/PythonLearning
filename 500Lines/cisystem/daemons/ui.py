@@ -8,7 +8,7 @@ class UI(object):
     def __init__(self, config_path = "config/config.ini"):
         print("UI initiated")
         self.jobs = dict()
-        self._client = netutils.Client()
+        self._client = netutils.Client(config_path, target='dispatcher')
 
     def start(self):
         res = self.menu()
@@ -92,6 +92,7 @@ class UI(object):
         self._list_jobs()
         job_name = self._get_job_name("Please select job to run")
         self.jobs[job_name].state = "R"
+        self._client.send_message(job_name)
 
     def stop_job(self):
         self._list_jobs()

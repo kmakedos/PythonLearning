@@ -18,7 +18,7 @@ class Handler(socketserver.BaseRequestHandler):
 
 class Dispatcher:
     def __init__(self, config_path="config/config.ini"):
-        self.server = netutils.Server(config_path, Handler)
+        self.server = netutils.Server(config_path, target='dispatcher', handler=Handler)
         self._queue = queue.Queue()
 
     def put(self, item):
