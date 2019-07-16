@@ -3,7 +3,7 @@ import pickle
 
 class Job(object):
 
-    def __init__(self, name, scm_url, build_command):
+    def __init__(self, name=None, scm_url=None, build_command=None):
         self.data = dict()
         self.data['name'] = name
         self.data['scm_url'] = scm_url

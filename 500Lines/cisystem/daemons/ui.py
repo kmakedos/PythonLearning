@@ -68,7 +68,8 @@ class UI(object):
         job_name = self._get_job_name(exist=False)
         job_scm = input("Please give me job SCM url (eg. github):")
         job_instructions = input("Please provide build command for job:")
-        self.jobs[job_name] = job.Job(job_name, job_scm, job_instructions)
+        current_job = job.Job(job_name, job_scm, job_instructions)
+        self.jobs[job_name] = current_job
 
     def delete_job(self):
         self._list_jobs()
@@ -92,10 +93,11 @@ class UI(object):
         self._list_jobs()
         job_name = self._get_job_name("Please select job to run")
         self.jobs[job_name].state = "R"
-        self._client.send_message(job_name)
+        self._client.send_message(self.jobs[job_name].serialize())
 
     def stop_job(self):
         self._list_jobs()
         print("Stopping job in queue")
         job_name = self._get_job_name("Please select job to stop")
         self.jobs[job_name].state = "S"
+        self._client.send_message(self.jobs[job_name].serialize())

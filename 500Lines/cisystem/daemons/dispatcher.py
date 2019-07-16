@@ -8,13 +8,16 @@
 import queue
 import socketserver
 from networks import netutils
+from models import job
 
 class Handler(socketserver.BaseRequestHandler):
     def handle(self):
-        self.data = self.request.recv(1024).strip()
-        print("Dispatcher received : ", self.data)
-        # Here the message which should be a job description
-        # should be put in the queue and an appropriate worker should pick it
+        msg = self.request.recv(1024).strip()
+        current_job = job.Job()
+        current_job.unserialize(msg)
+        self.server.server_data = current_job.data
+
+
 
 class Dispatcher:
     def __init__(self, config_path="config/config.ini"):

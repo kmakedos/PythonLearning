@@ -38,10 +38,10 @@ class Client:
         self._port = int(self.config[target]['Port'])
         self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    def send_message(self, message="Hello"):
+    def send_message(self, message):
         if message is not None:
             self._socket.connect(((self._host, self._port)))
-            self._socket.send(message.encode())
+            self._socket.send(message)
         else:
             print("Error: Empty message received!")
         self._socket.close()
