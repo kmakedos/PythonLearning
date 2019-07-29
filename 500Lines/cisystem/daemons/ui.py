@@ -92,8 +92,11 @@ class UI(object):
     def run_job(self):
         self._list_jobs()
         job_name = self._get_job_name("Please select job to run")
-        self.jobs[job_name].state = "R"
-        self._client.send_message(self.jobs[job_name].serialize())
+        if job_name in self.jobs.keys():
+            self.jobs[job_name].state = "R"
+            self._client.send_message(self.jobs[job_name].serialize())
+        else:
+            print("Wrong job name")
 
     def stop_job(self):
         self._list_jobs()
