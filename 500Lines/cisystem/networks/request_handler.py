@@ -6,7 +6,7 @@ class RequestHandler(socketserver.BaseRequestHandler):
     """
     def __init__(self, callback=None, *args, **kwargs):
         self.callback = callback
-        socketserver.BaseRequestHandler.__init__(*args, **kwargs)
+        socketserver.BaseRequestHandler.__init__(self, *args, **kwargs)
         self.data = None
 
     def handle(self):
@@ -14,11 +14,10 @@ class RequestHandler(socketserver.BaseRequestHandler):
         self.data = self.request.recv(1024).strip()
         self.callback(self.data)
 
-
-class RequestHandlerFactory(object):
-
-    def handle_factory(self, callback, *args, **kwargs):
-        def create_handler(*args, **kwargs):
+    @staticmethod
+    def handle_factory(callback):
+        def createHandler(*args, **kwargs):
             return RequestHandler(callback, *args, **kwargs)
-        return create_handler(args, kwargs)
+        return createHandler
+
 
