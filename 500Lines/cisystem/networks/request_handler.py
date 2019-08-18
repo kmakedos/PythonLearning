@@ -17,8 +17,8 @@ class RequestHandler(socketserver.BaseRequestHandler):
 
 class RequestHandlerFactory(object):
 
-    def handle_factory(self, callback):
+    def handle_factory(self, callback, *args, **kwargs):
         def create_handler(*args, **kwargs):
             return RequestHandler(callback, *args, **kwargs)
-
+        return create_handler(args, kwargs)
 
