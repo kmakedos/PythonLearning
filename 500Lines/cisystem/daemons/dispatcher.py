@@ -14,7 +14,6 @@ class Dispatcher:
         self.request_handler_factory = request_handler.RequestHandlerFactory()
         self.server = netutils.Server(config_path, target='dispatcher',
                                       handler=self.request_handler_factory.handle_factory(callback=self.put))
-        print("Calling netutils Server with handler=", self.request_handler_factory.handle_factory(callback=self.put))
         self._queue = queue.Queue()
 
     def put(self, item):

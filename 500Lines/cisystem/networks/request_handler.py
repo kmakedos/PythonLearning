@@ -20,5 +20,5 @@ class RequestHandlerFactory(object):
     def handle_factory(self, callback):
         def create_handler(*args, **kwargs):
             return RequestHandler(callback, *args, **kwargs)
-
+        return create_handler
 
