@@ -1,4 +1,6 @@
 import socketserver
+
+
 class RequestHandler(socketserver.BaseRequestHandler):
     """
     The request handler must be instantiated once per connection and must
@@ -16,12 +18,7 @@ class RequestHandler(socketserver.BaseRequestHandler):
 
     @staticmethod
     def handle_factory(callback):
-        def createHandler(*args, **kwargs):
+        def create_handler(*args, **kwargs):
             return RequestHandler(callback, *args, **kwargs)
-<<<<<<< HEAD
         return create_handler
-=======
-        return createHandler
-
->>>>>>> 4c68415b22a398b9caf451efd0c51d2c5b06c25d
 

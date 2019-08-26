@@ -13,11 +13,7 @@ from models import job
 class Dispatcher:
     def __init__(self, config_path="config/config.ini"):
         self.server = netutils.Server(config_path, target='dispatcher',
-<<<<<<< HEAD
-                                      handler=self.request_handler_factory.handle_factory(callback=self.put))
-=======
                                       handler=request_handler.RequestHandler.handle_factory(self.put))
->>>>>>> 4c68415b22a398b9caf451efd0c51d2c5b06c25d
         self._queue = queue.Queue()
 
     def put(self, item):
@@ -27,5 +23,12 @@ class Dispatcher:
 
     def start(self):
         self.server.start()
+        while True:
+            if not self._queue.empty():
+                while not self._queue.empty():
+                    print(self._queue.get())
+            else:
+                yield
+
         #while not self._queue.empty():
         #    self._send_message(self._queue.get())
