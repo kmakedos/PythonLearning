@@ -10,8 +10,10 @@ import threading
 import configparser
 from networks import request_handler
 
+
 class ThreadingSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
+
 
 class Server():
 

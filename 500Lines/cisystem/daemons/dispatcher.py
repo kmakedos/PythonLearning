@@ -9,11 +9,15 @@ from networks import netutils, request_handler
 from models import job
 
 
+
 class Dispatcher:
     def __init__(self, config_path="config/config.ini"):
-        self.request_handler_factory = request_handler.RequestHandlerFactory()
         self.server = netutils.Server(config_path, target='dispatcher',
+<<<<<<< HEAD
                                       handler=self.request_handler_factory.handle_factory(callback=self.put))
+=======
+                                      handler=request_handler.RequestHandler.handle_factory(self.put))
+>>>>>>> 4c68415b22a398b9caf451efd0c51d2c5b06c25d
         self._queue = queue.Queue()
 
     def put(self, item):
