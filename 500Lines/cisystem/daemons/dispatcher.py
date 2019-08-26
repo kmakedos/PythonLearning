@@ -20,15 +20,15 @@ class Dispatcher:
         current_job = job.Job()
         current_job.unserialize(item)
         self._queue.put(current_job)
+        self.process()
 
     def start(self):
         self.server.start()
-        while True:
-            if not self._queue.empty():
-                while not self._queue.empty():
-                    print(self._queue.get())
-            else:
-                yield
+
+    def process(self):
+        while not self._queue.empty():
+            print(">> %s" % self._queue.get())
+
 
         #while not self._queue.empty():
         #    self._send_message(self._queue.get())

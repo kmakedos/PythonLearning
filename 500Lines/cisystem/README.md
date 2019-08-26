@@ -105,3 +105,36 @@ So after updating we will need:
 5. An observer that will poll SCM and send also a message to create jobs
 6. A queue of jobs in Dispatcher that will hold current work to be done
 7. A pool of workers in Dispatcher that will consume Job Queue.
+
+
+### Afterthoughts on initial trial
+It seems that working with synchronous servers is not going to work. We need more thought on this.
+New design should be like this:
+- Main running process is dispatcher. It should control every main aspect. Responsibilities:
+   * Run a server to wait for messages 
+   * Hold an internal job queue which holds jobs and their state 
+   * It has a pool of workers to execute jobs.
+   * Assigns a new job to a worker that is idle.
+   * So we need a state table for workers also
+   * When a new message arrives it acts accordingly:
+       * If it is a new job it adds it to the queue
+       * If it is a command for a job it acts accordingly ? (run/stop)
+       * If it is a job state request status it checks its internal state table.
+- Secondary process is workers. Responsibilities:
+   * Waits idle or it is stopped. It runs when a new job is needed to run.
+   * Runs job and updates job state in respective table
+- UI runs on a separate process. Responsibilities:
+   * Interacts with user and receives commands
+   * Sends messages to dispatcher
+   * Receives responses from dispatcher
+- Observer also a separate process. Similar to UI just automated. Responsibilities:
+   * For every job in Queue, it checks it's scm source and detects any changes.
+   * If any change is found, it runs the respective job.
+  
+** Remarks:
+   * We need to study on async io servers for handling of communications
+   * We need to select thread/process/coroutine workers and how to control them
+   * How to spawn workers?
+   * Should the observer be checking only active jobs in Queue? Or it could be manipulated through UI?
+   * What about branches? Other type of scm changes?
+   * Error handling and Testing should be in place. 
